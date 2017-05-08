@@ -25,7 +25,7 @@ install:
 
 # Run script
 script:
-  - phpunit
+  - vendor/bin/phpunit
 
 # Allows use container-based infrastructure
 sudo: false  
