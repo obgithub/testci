@@ -1,13 +1,18 @@
-# Project language
-php:
-  - 7.0
+# Cache composer packages so "composer install" is faster
+cache:
+  directories:
+    - $HOME/.composer/cache/files
 
-# Allows use container-based infrastructure
-sudo: false
+# Matrix to test in every php version
+matrix:
+  # Fast finish allows to set the build as "finished" even if the "allow_failures" matrix elements are not finished yet.
+  fast_finish: true
+  include:
+    - php: 7.0
 
 # Define an environment variable
 env:
-  - SYMFONY_VERSION="3.0.*"
+  - SYMFONY_VERSION="3.0.*" DB=mysql
 
 # Update composer
 before-install:
@@ -22,6 +27,9 @@ install:
 # Run script
 script:
   - phpunit
+
+# Allows use container-based infrastructure
+sudo: false  
 
 # After a build, send email notification with the build results
 notifications:
