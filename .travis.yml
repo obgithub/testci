@@ -1,8 +1,14 @@
 # Project language
-language: php
+php:
+  - 7.0
 
 # Allows use container-based infrastructure
 sudo: false
+
+# Cache composer packages so "composer install" is faster
+cache:
+  directories:
+    - $HOME/.composer/cache/files
 
 # Define an environment variable
 env:
