@@ -2,7 +2,7 @@ language: php
 
 php:
   # Test against the given PHP version ...
-  - 5.6
+  - 7.0
 
 # Define an environment variable
 env:
@@ -25,7 +25,7 @@ install:
 
 # Run script
 script:
-  - vendor/bin/phpunit
+  - phpunit
 
 # Allows use container-based infrastructure
 sudo: false  
