@@ -13,6 +13,6 @@ class HellociControllerTest extends TestCase
         $result = $calc->add(10, 20);
 
         // assert that your calculator added the numbers correctly!
-        $this->assertEquals(40, $result);
+        $this->assertEquals(30, $result);
     }
 }
