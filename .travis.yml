@@ -19,6 +19,7 @@ install:
 
 script:
 - phpunit
+- gulp --production
 
 addons:
     apt:
