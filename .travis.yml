@@ -11,14 +11,9 @@ cache:
 
 # Matrix to test in every php version
 matrix:
-  # Fast finish allows to set the build as "finished" even if the "allow_failures" matrix elements are not finished yet.
-  fast_finish: true
   include:
     - php: 7.0
-
-# Define an environment variable
-env:
-  SYMFONY_VERSION=3.2.*
+    env: SYMFONY_VERSION=3.2.*
 
 # Update composer
 before-install:
@@ -36,4 +31,4 @@ script:
 
 # After a build, send email notification with the build results
 notifications:
-  email: slimbachiya@officebrain.com
+  email: false
