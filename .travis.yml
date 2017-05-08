@@ -38,7 +38,6 @@ DEPLOY_PASS=rAb@2Ufr3Xes!Uf:
   secure: wctClVG0nWgnpK5z+HuTY3TKEEyR606FB2MK8u1I8mQ0pBi9IPPRYYwUMOSM032jybJv+rmBeIR28MAhQCGasdxNx/Y9l/QBDD+/3BI3bMIsKmZyqUex7Bk8VLtNM9eRctcCmEyvXb6m6+5DzmlWtiQvTg8IDzVOZjYGIKQRmx5IaZRtRXD3+ZFt/lvepGPTaTmpuwTCsOT9FqlCIrX7ilRjYM082bohgteAV2bcdKGttv313Fldytm8KBO5addsc5RvvDai5K3RUhYAGeYLiqVd4N8WMvV2aCMNgWlum1fguhssGrCswe0qicGfT8xYIFHemdin7mSXjFbOHy0vGrPpfqu9Pe5JX8N5F/O2+/pz/LvkCAillIMj6fQQkQbYDWL/x/5BK/FHfhAV+5CMJoLABQzr1vzfYf2wIoGGHHi2XsiemxQ5l/W44AFqigi2vkdmsY0t6dFnOtkMoKHYf5kP16TOKFzoUYMlP/OTb6VoCyW+KlO3hnn9LWvTmA0Kebc1FXf5huFZQZZ9QdzoZb5IFzem1KROgCbL1GYd3Yyp6QpPOnYOayOdbDNiZ5ubRRHfQQY0eLhQ1dcfsX1jpRTYvN+2Gl+8Op57cWVPalnneMqZqXDMeGeS+sVP6TLDOUA/s0jTocbYH7MpxUhG2iyuQTxh7A66AZTrqZnipTM=
 
 after_success:
-    - export SYMFONY_ENV=prod && composer install --no-dev -o
     - mkdir build
     - mv * build
     - tar -czf package.tgz build
