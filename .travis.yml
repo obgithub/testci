@@ -4,11 +4,6 @@ language: php
 # Allows use container-based infrastructure
 sudo: false
 
-# Matrix to test in every php version
-matrix:
-  include:
-    - php: 7.0
-
 # Define an environment variable
 env:
   - SYMFONY_VERSION="3.0.*"
