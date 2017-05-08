@@ -1,14 +1,13 @@
+language: php
+
 # Cache composer packages so "composer install" is faster
 cache:
   directories:
     - $HOME/.composer/cache/files
 
-# Matrix to test in every php version
-matrix:
-  # Fast finish allows to set the build as "finished" even if the "allow_failures" matrix elements are not finished yet.
-  fast_finish: true
-  include:
-    - php: 7.0
+php:
+  # Test against the given PHP version ...
+  - 7.0
 
 # Define an environment variable
 env:
@@ -22,15 +21,3 @@ before-install:
 # Create database, schema and fixtures
 install:
   - composer install
-  - cp app/config/parameters.yml.dist app/config/parameters.yml
-
-# Run script
-script:
-  - phpunit
-
-# Allows use container-based infrastructure
-sudo: false  
-
-# After a build, send email notification with the build results
-notifications:
-  email: false
