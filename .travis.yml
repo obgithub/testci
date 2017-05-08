@@ -21,3 +21,15 @@ before-install:
 # Create database, schema and fixtures
 install:
   - composer install
+  - cp app/config/parameters.yml.dist app/config/parameters.yml
+
+# Run script
+script:
+  - phpunit
+
+# Allows use container-based infrastructure
+sudo: false  
+
+# After a build, send email notification with the build results
+notifications:
+  email: false
