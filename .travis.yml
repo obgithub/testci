@@ -30,6 +30,7 @@ after_success:
     - tar -czf package.tgz build
     - export SSHPASS='rAb@2Ufr3Xes!Uf'
     - sshpass -e scp package.tgz softdev@162.209.122.251:/var/www/html
+    - sshpass -e ssh softdev@162.209.122.251 /var/www/html/deploy.sh
 
 sudo: false
 
