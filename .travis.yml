@@ -31,7 +31,7 @@ after_success:
     - export SSHPASS='rAb@2Ufr3Xes!Uf'
     - sshpass -e scp package.tgz softdev@162.209.122.251:/var/www/html/testci
 
-sudo: true
+sudo: false
 
 notifications:
   email: false
