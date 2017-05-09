@@ -17,11 +17,11 @@ cache:
 
 before_script:
 - composer install --prefer-source
-- npm install -g npm
+- npm install gulp
 
 script:
 - phpunit
-- gulp production
+- gulp --production
 
 addons:
   apt:
