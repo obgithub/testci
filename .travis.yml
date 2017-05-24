@@ -37,5 +37,4 @@ after_success:
 sudo: false
 
 notifications:
-  email: false 
-  
+  email: slimbachiya@officebrain.com
